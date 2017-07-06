@@ -10,32 +10,29 @@ using System.Windows;
 
 namespace WpfApp2
 {
-    class SqlControl
+    public class SqlControl
     {
+        String CS = " ";
+        SQLiteConnection Conn = new SQLiteConnection("CS");
+        SQLiteCommand Cmd = new SQLiteCommand();
+
+        // DB DATA
+        public SQLiteDataAdapter DA = new SQLiteDataAdapter();
         public DataTable DT = new DataTable();
-        String CS = "Data Source=C:\\Users\\klboy\\Google Drive\\Route9094\\Projects\\WpfApp2\\WpfApp2\\AppData\\Route9094.SQLite;";
-        
-      
-            try
-            {
-                using (SQLiteConnection Conn = new SQLiteConnection(CS))
-                
-                    String query = "Select * from Route";
-                    SQLiteDataAdapter da = new SQLiteDataAdapter(query, Conn);
-                }
 
-                da.Fill(DT);
+        // QUERY PARAMETERS
+        public List<SQLiteParameter> Params = new List<SQLiteParameter>();
 
-                da.Update(DT);
-                Conn.Close();
-            }
-            catch (Exception)
+        // QUERY STATISTICS
+        public int RecordCount;
+        public String Exception;
 
-            { 
-                MessageBox.Show("An Error Occured");
-            throw;
-            }
-        }
+        //public Sub New()
+        //End Sub
 
+        //' ALLOW CONNECTION STRING OVERRIDE
+        //Public Sub New(ConnectionString As String)
+        //    Conn = New SQLiteConnection(ConnectionString)
+        //End Sub
     }
 }
