@@ -27,7 +27,10 @@ namespace WpfApp2
         public int RecordCount;
         public String Exception;
 
-        //****** Test update 7/082017 12:10AM ******//
+        //****** Test update 7/08/2017 12:10AM ******//
+
+        //****** Test update 7/08/2017  2:50AM ******//
+
 
         //public Sub New()
         //End Sub
