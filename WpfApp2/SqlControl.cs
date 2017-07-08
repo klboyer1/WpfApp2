@@ -13,7 +13,7 @@ namespace WpfApp2
     public class SqlControl
     {
         String CS = " ";
-        SQLiteConnection Conn = new SQLiteConnection("CS");
+        SQLiteConnection Conn = new SQLiteConnection("CS"); // ??
         SQLiteCommand Cmd = new SQLiteCommand();
 
         // DB DATA
@@ -27,12 +27,14 @@ namespace WpfApp2
         public int RecordCount;
         public String Exception;
 
+        //****** Test update 7/082017 12:10AM ******//
+
         //public Sub New()
         //End Sub
 
         //' ALLOW CONNECTION STRING OVERRIDE
         //Public Sub New(ConnectionString As String)
-        //    Conn = New SQLiteConnection(ConnectionString)
+        //    
         //End Sub
     }
 }

@@ -47,9 +47,7 @@ namespace WpfApp2
 
         private void btnLoadData_Click(object sender, RoutedEventArgs e)
         {
-            SQL.GetData();
-            //this.Datagrid1.ItemsSource = 
-
+          
 
         }
 
